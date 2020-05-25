@@ -1,0 +1,17 @@
+# services:
+#     Xigen\Bundle\CloudflareBundle\Service\Cloudflare:
+#         autowire: true
+#         public: true
+#         arguments: ['%cloudflare_email%', '%cloudflare_apikey%']
+
+services:
+    MedleyBox\Plugins\GistImport\Command\:
+        resource: '../../Command/*'
+        autowire: true
+        tags: ['console.command']
+
+    MedleyBox\Plugins\GistImport\Service\Github:
+        autowire: true
+        public: true
+        arguments:
+          $gist: '%env(string:MEDLEY_GIST_ID)%'

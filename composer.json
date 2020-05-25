@@ -1,0 +1,15 @@
+{
+    "name" : "medleybox/plugin-gist-import",
+    "description" : "",
+    "type" : "symfony-bundle",
+    "require" : {
+        "php": "^7.3",
+        "symfony/framework-bundle": "^5",
+        "xigen.io/guzzle-bundle": "^1.0"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "MedleyBox\\Plugins\\GistImport\\" : ""
+        }
+    }
+}
